@@ -1,33 +1,27 @@
 /* Task 2: Style the Application */
 /* Fun and joyful background */
-body 
-{
+/* ===== Base Styling ===== */
+body {
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: 
+    background:
         linear-gradient(135deg, rgba(255, 183, 197, 0.7), rgba(173, 216, 230, 0.7), rgba(144, 238, 144, 0.7)),
         url('https://cdn.pixabay.com/photo/2017/07/31/11/21/keyboard-2555861_1280.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     margin: 0;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
-    border: none;
     min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
-
-/*  Center everything vertically & horizontally */
+    overflow: hidden; /* No scrolling */
     display: flex;
-    flex-direction: column;  /* keeps footer below */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     position: relative;
 }
 
-/* Overlay effect to make text readable */
-body::before 
-{
+/* Overlay for readability */
+body::before {
     content: "";
     position: fixed;
     top: 0; left: 0;
@@ -36,163 +30,177 @@ body::before
     z-index: -1;
 }
 
-/* Main container */
-.typing-test-container 
-{
-    max-width: 700px;
-    margin: 60px auto;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+/* ===== Main Container ===== */
+.typing-test-container {
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 32px;
+    border-radius: 22px;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
     text-align: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
     transition: transform 0.3s ease;
 }
 
-.typing-test-container:hover 
-{
-    transform: scale(1.02);
+.typing-test-container:hover {
+    transform: scale(1.01);
 }
 
-/* Heading */
-h1, .typing-test-container h1 
-{
-    font-size: 2.7em;
-    margin-bottom: 25px;
+/* ===== Headings ===== */
+h1, .typing-test-container h1 {
+    font-size: 2em;
+    margin-bottom: 12px;
     color: #ffeb3b;
-    text-shadow: 0 0 10px #ff4081;
+    text-shadow: 0 0 6px #ff4081;
 }
 
-
-/* Text to type */
-#text-to-type 
-{
+h2 {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+/* ===== Text to Type ===== */
+#text-to-type {
+    font-size: 1.05em;
+    margin-bottom: 18px;
     color: #fff;
     background: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+    padding: 14px;
+    border-radius: 16px;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.25);
 }
 
-/* Typing input */
-#typing-input 
-{
+/* ===== Typing Input ===== */
+#typing-input {
     width: 100%;
-    font-size: 1.1em;
-    padding: 15px;
-    border-radius: 15px;
+    font-size: 1em;
+    padding: 12px;
+    border-radius: 12px;
     border: none;
     outline: none;
     background: rgba(255, 255, 255, 0.85);
     color: #333;
     resize: none;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
     transition: box-shadow 0.3s ease;
 }
 
-#typing-input:focus 
-{
-    box-shadow: 0 0 15px #00ffcc;
+#typing-input:focus {
+    box-shadow: 0 0 12px #00ffcc;
 }
 
-/* Timer display */
-#timer-display 
-{
-    font-size: 1.4em;
-    margin: 20px 0;
+/* ===== Timer ===== */
+#timer-display {
+    font-size: 1.1em;
+    margin: 10px 0;
     color: #7fffd4;
     font-weight: bold;
 }
 
-/* Buttons */
-.controls 
-{
-    margin: 20px 0;
+/* ===== Buttons ===== */
+.controls {
+    margin: 15px 0;
 }
 
-.controls button 
-{
+.controls button {
     background: linear-gradient(135deg, #ff80ab, #82b1ff, #80deea);
     color: #fff;
     border: none;
-    padding: 12px 25px;
-    font-size: 1.1em;
-    margin: 10px;
-    border-radius: 20px;
+    padding: 10px 22px;
+    font-size: 1em;
+    margin: 8px;
+    border-radius: 14px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-.controls button:hover 
-{
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(255,255,255,0.3);
+.controls button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
 }
-/*login enter button*/
-.button-link 
-{
+
+/* ===== Login Enter Button ===== */
+.button-link {
     display: inline-block;
-    padding: 1px 5px;
+    padding: 8px 14px;
     background-color: #ae00ff;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     text-decoration: none;
     cursor: pointer;
+    font-size: 1em;
     transition: background-color 0.3s;
 }
-.button-link:hover 
-{
+.button-link:hover {
     background-color: #00b3a4;
 }
 
-/* Results section */
-.results 
-{
-    margin-top: 25px;
-    font-size: 1.2em;
+/* ===== Results Section ===== */
+.results {
+    margin-top: 18px;
+    font-size: 1.05em;
     color: #f3e5f5;
     background: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    padding: 15px;
+    border-radius: 15px;
+    padding: 12px;
 }
 
-/* Fun keyboard hands overlay */
-body::after 
-{
+/* ===== Decorative Hands Overlay ===== */
+body::after {
     content: "";
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 350px;
-    height: 220px;
+    width: 280px;
+    height: 170px;
     background: url('https://cdn.pixabay.com/photo/2017/01/06/19/15/hands-1959939_1280.jpg') no-repeat bottom right;
     background-size: contain;
     opacity: 0.25;
     pointer-events: none;
 }
 
-/* Small container class for flexibility */
-.container 
-{
+/* ===== Smaller Containers (login) ===== */
+.container {
     margin: 0 auto;
     display: inline-block;
-    padding: 20px;
+    padding: 18px;
     background-color: #f06292;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
 
-/* Footer stays lower */
-footer 
-{
-    margin-top: auto; /* pushes it to the bottom */
-    padding: 15px;
-    font-size: 0.9em;
+/* ===== Footer ===== */
+footer {
+    margin-top: auto;
+    padding: 12px;
+    font-size: 0.8em;
     color: #fff;
     opacity: 0.8;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== Responsive Adjustment for Smaller Screens ===== */
+@media (max-height: 800px) {
+    html { font-size: 95%; }
+    body {
+        padding: 8px;
+    }
+    .typing-test-container {
+        padding: 24px;
+        max-width: 560px;
+    }
+    #text-to-type {
+        font-size: 1em;
+        padding: 10px;
+    }
+    #typing-input {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+    .controls button {
+        font-size: 0.95em;
+        padding: 8px 16px;
+    }
 }

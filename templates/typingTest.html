@@ -9,29 +9,30 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
+    <!-- Add section containing main content of the page -->
     <main class="typing-test-container">
-        <!-- App Heading -->
+        <!-- Add test title using h2 (App Heading) -->
         <h2>Lets get started</h2>
-
+        <!-- Dynamically display a random paragraph -->
         <!-- Text to Type -->
         <p id="text-to-type">
             <!-- Random text will appear here -->
         </p>
 
-        <!-- Typing Input Area -->
+        <!-- Add textarea to capture the user input -->
         <textarea id="typing-input" rows="5" cols="50" placeholder="Start typing here..."></textarea>
 
-        <!-- Timer Display -->
+        <!-- Display the test timer -->
         <p id="timer-display">Time: 0s</p>
 
-        <!-- Control Buttons -->
+        <!-- add a section with class with Control Buttons -->
         <section class="controls">
             <button id="start-btn">Start Test</button>
             <button id="stop-btn">Stop Test</button>
             <button id="logout-btn">Exit Test</button>
         </section>
 
-        <!-- Results Display -->
+        <!-- add a section with class to Results Display -->
         <section class="results">
             <p id="speed-result">Speed: —</p>
             <p id="accuracy-result">Accuracy: —</p>
@@ -39,6 +40,10 @@
     </main>
 
     <!-- Link to JavaScript -->
-    <script src="/static/index.js"></script>
+    <!-- <script src="/static/index.js"></script> -->
+        <script src="/static/typingTest.js"></script>
+<footer class="footer">
+    <p>&copy; 2025 LaTorya's Website</p>
+</footer>
 </body>
 </html>
