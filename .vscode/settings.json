@@ -1,8 +1,0 @@
-{
-    // "task.allowAutomaticTasks": "on",
-    // "workbench.startupEditor": "none",
-    // "window.autoDetectColorScheme": true,
-    // "terminal.integrated.cwd": ""
-
-    "liveServer.settings.port": 5508
-}

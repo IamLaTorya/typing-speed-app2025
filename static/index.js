@@ -26,7 +26,7 @@ if (loginForm)
             localStorage.setItem("storedUsername", username);
 
             //redirect to typing test page
-            window.location.href = "index2.html";  
+            window.location.href = "../templates/index2.html";  
         }
     });
     //when the user presses the enter key on the keyboard
@@ -41,7 +41,7 @@ if (loginForm)
         if (username !== "")
             {
                 localStorage.setItem("storedUsername", username);
-                window.location.href = "index2.html";
+                window.location.href = "../templates/index2.html";
             }
         }
     }); 
@@ -60,7 +60,7 @@ if (typingTestContainer)
 
     if (!username) {
       // Redirect to login if no username
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
     return;
     
 }
@@ -78,7 +78,7 @@ if (logoutBtn)
     logoutBtn.addEventListener("click", () => 
     {
         localStorage.removeItem("storedUsername");
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
     });
 }
 
