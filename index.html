@@ -1,26 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles.css">
-    <title>My Typing Speed Appt</title>
-</head>
-<body>
-    <h1>Welcome to <Br> My Typing Speed App</h1>
-        <h2>Enter your name to get started</h2>
-<div class="container">
-    <form id="usernameLogin">
-        <label for="username"><strong>Name:</strong></label>
-        <input type="text" id="username" name="username" placeholder="Enter your name" required>
-        <!-- <button type="submit">Enter</button> -->
-        <a id="button" class="button-link"><strong>Enter</strong></a>
-    </form>
-</div>
-    <script src="../static/index.js"></script>
-<footer class="footer">
-
-        <p>&copy; 2025 LaTorya's Website</p>
-</footer>
-</body>
-</html>
+<!DOCTYPE html> <!-- Declare the document type as HTML5 -->
+<html lang="en"> <!-- Open HTML element and declare page language as English -->
+<head> <!-- Begin document head (metadata, links, title) -->
+    <meta charset="UTF-8"> <!-- Set character encoding to UTF-8 for wide character support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure responsive scaling on mobile devices -->
+    <link rel="stylesheet" href="../static/styles.css"> <!-- Link external CSS stylesheet for page styles -->
+    <title>My Typing Speed Appt</title> <!-- Set the text that appears in the browser tab -->
+</head> <!-- Close head section -->
+<body> <!-- Begin page body (visible content) -->
+    <h1>Welcome to <Br> My Typing Speed App</h1> <!-- Main heading; includes a <br> to force a line break between "Welcome to" and app name -->
+        <h2>Enter your name to get started</h2> <!-- Subheading prompting the user to input their name -->
+<div class="container"> <!-- Open a container div (used for grouping and styling the login block) -->
+    <form id="usernameLogin"> <!-- Start a form element with id "usernameLogin" used by JavaScript to attach behavior -->
+        <label for="username"><strong>Name:</strong></label> <!-- Label tied to the input with id "username"; bolds the word "Name:" -->
+        <input type="text" id="username" name="username" placeholder="Enter your name" required> <!-- Text input for the user's name with placeholder text and required attribute -->
+        <a id="button" class="button-link"><strong>Enter</strong></a> <!-- Anchor styled as a button (has id "button") which the JS listens for as the submit control -->
+    </form> <!-- Close the form element -->
+</div> <!-- Close the container div -->
+    <script src="../static/index.js"></script> <!-- Include external JavaScript file that handles login, storage, and redirect logic -->
+<footer class="footer"> <!-- Begin footer section with class "footer" for styling -->
+        <p>&copy; 2025 LaTorya's Website</p> <!-- Copyright notice inside a paragraph element -->
+</footer> <!-- Close footer -->
+</body> <!-- Close the body element -->
+</html> <!-- Close the html element -->

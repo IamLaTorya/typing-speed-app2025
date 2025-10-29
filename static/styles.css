@@ -1,206 +1,225 @@
 /* Task 2: Style the Application */
 /* Fun and joyful background */
-/* ===== Base Styling ===== */
-body {
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:
-        linear-gradient(135deg, rgba(255, 183, 197, 0.7), rgba(173, 216, 230, 0.7), rgba(144, 238, 144, 0.7)),
-        url('https://cdn.pixabay.com/photo/2017/07/31/11/21/keyboard-2555861_1280.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    padding: 15px;
-    text-align: center;
-    min-height: 100vh;
-    overflow: hidden; /* No scrolling */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
+/* ===== Base Styling ===== */ 
+/* Section header: base page styles */
+body { /* Start rules for the <body> element */
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set prioritized font stack for page text */
+    background: /* Begin background property combining gradient and image */
+        linear-gradient(135deg, rgba(255, 183, 197, 0.7), rgba(173, 216, 230, 0.7), rgba(144, 238, 144, 0.7)), /* Layer 1: diagonal semi-transparent gradient colors */
+        url('https://cdn.pixabay.com/photo/2017/07/31/11/21/keyboard-2555861_1280.jpg') no-repeat center center fixed; /* Layer 2: background image centered and fixed */
+    background-size: cover; /* Scale background to cover the viewport */
+    color: #fff; /* Set default text color to white */
+    margin: 0; /* Remove default body margin */
+    padding: 15px; /* Add inner spacing around page content */
+    text-align: center; /* Center-align inline content */
+    min-height: 100vh; /* Make body at least full viewport height */
+    overflow: hidden; /* Prevent scrolling; hide overflow */
+    display: flex; /* Use flexbox layout on body */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    position: relative; /* Establish positioning context for pseudo-elements */
+} /* End body rules */
 
-/* Overlay for readability */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: -1;
-}
+/* Overlay for readability */ 
+/* Section header: dark overlay to improve contrast */
+body::before { /* Create a pseudo-element placed under content */
+    content: ""; /* Generate an empty pseudo-element */
+    position: fixed; /* Fix overlay to viewport so it doesn't scroll */
+    top: 0; left: 0; /* Anchor overlay to top-left corner */
+    width: 100%; height: 100%; /* Make overlay cover the whole viewport */
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay to darken background */
+    z-index: -1; /* Place overlay behind other content but above background image */
+} /* End overlay rules */
 
-/* ===== Main Container ===== */
-.typing-test-container {
-    max-width: 600px;
-    width: 90%;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 32px;
-    border-radius: 22px;
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
-    text-align: center;
-    backdrop-filter: blur(8px);
-    transition: transform 0.3s ease;
-}
+/* ===== Main Container ===== */ 
+/* Section header: central UI card */
+.typing-test-container { /* Target the element that wraps the typing test */
+    max-width: 600px; /* Limit maximum width for readable line-length */
+    width: 90%; /* Make container responsive: 90% of available width */
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background for frosted look */
+    padding: 32px; /* Internal spacing inside the container */
+    border-radius: 22px; /* Rounded corners for the container */
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.25); /* Soft outer glow to lift the container */
+    text-align: center; /* Center text inside container */
+    backdrop-filter: blur(8px); /* Blur background behind container (frosted glass effect) */
+    transition: transform 0.3s ease; /* Smooth transform transitions on hover */
+} /* End typing-test-container rules */
 
-.typing-test-container:hover {
-    transform: scale(1.01);
-}
+.typing-test-container:hover { /* Hover state for the main container */
+    transform: scale(1.01); /* Slightly enlarge on hover for subtle emphasis */
+} /* End hover rule */
 
-/* ===== Headings ===== */
-h1, .typing-test-container h1 {
-    font-size: 2em;
-    margin-bottom: 12px;
-    color: #ffeb3b;
-    text-shadow: 0 0 6px #ff4081;
-}
+/* ===== Headings ===== */ 
+/* Section header: heading styles */
+h1, .typing-test-container h1 { /* Target all h1 and h1 inside the container */
+    font-size: 2em; /* Larger font size for primary headings */
+    margin-bottom: 12px; /* Space below heading */
+    color: #ffeb3b; /* Yellow-ish heading color */
+    text-shadow: 0 0 6px #ff4081; /* Pink glow effect around heading */
+} /* End h1 rules */
 
-h2 {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
+h2 { /* Target secondary headings */
+    font-size: 1.2em; /* Slightly larger than body text */
+    margin-bottom: 15px; /* Space below h2 */
+} /* End h2 rule */
 
-/* ===== Text to Type ===== */
-#text-to-type {
-    font-size: 1.05em;
-    margin-bottom: 18px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 14px;
-    border-radius: 16px;
-    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.25);
-}
+/* ===== Text to Type ===== */ 
+/* Section header: displayed text block */
+#text-to-type { /* Target element that shows the paragraph to type */
+    font-size: 1.05em; /* Slightly larger font for readability */
+    margin-bottom: 18px; /* Space below the text block */
+    color: #fff; /* White text color */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background behind text */
+    padding: 14px; /* Inner spacing in text block */
+    border-radius: 16px; /* Rounded corners on text block */
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.25); /* Inner glow to give depth */
+} /* End #text-to-type rules */
 
-/* ===== Typing Input ===== */
-#typing-input {
-    width: 100%;
-    font-size: 1em;
-    padding: 12px;
-    border-radius: 12px;
-    border: none;
-    outline: none;
-    background: rgba(255, 255, 255, 0.85);
-    color: #333;
-    resize: none;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-    transition: box-shadow 0.3s ease;
-}
+/* ===== Typing Input ===== */ 
+/* Section header: input field styles */
+#typing-input { /* Target the typing input (textarea or input) */
+    width: 100%; /* Make input full width inside container */
+    font-size: 1em; /* Base font size */
+    padding: 12px; /* Internal padding in input */
+    border-radius: 12px; /* Rounded corners for the input */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default focus outline */
+    background: rgba(255, 255, 255, 0.85); /* Nearly opaque white background for input */
+    color: #333; /* Dark text color inside input for legibility */
+    resize: none; /* Prevent manual resizing if textarea */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Soft outer glow on the input */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition on focus */
+} /* End #typing-input rules */
 
-#typing-input:focus {
-    box-shadow: 0 0 12px #00ffcc;
-}
+#typing-input:focus { /* Focus state for the typing input */
+    box-shadow: 0 0 12px #00ffcc; /* Bright teal glow when user focuses the input */
+} /* End focus rule */
 
-/* ===== Timer ===== */
-#timer-display {
-    font-size: 1.1em;
-    margin: 10px 0;
-    color: #7fffd4;
-    font-weight: bold;
-}
+/* ===== Timer ===== */ 
+/* Section header: timer display */
+#timer-display { /* Target the element that shows elapsed time */
+    font-size: 1.1em; /* Slightly larger font for timer */
+    margin: 10px 0; /* Vertical spacing around timer */
+    color: #7fffd4; /* Aquamarine color for timer text */
+    font-weight: bold; /* Make timer text bold */
+} /* End #timer-display rule */
 
-/* ===== Buttons ===== */
-.controls {
-    margin: 15px 0;
-}
+/* ===== Buttons ===== */ 
+/* Section header: control buttons */
+.controls { /* Container for start/stop buttons */
+    margin: 15px 0; /* Vertical spacing around controls */
+} /* End .controls rule */
 
-.controls button {
-    background: linear-gradient(135deg, #ff80ab, #82b1ff, #80deea);
-    color: #fff;
-    border: none;
-    padding: 10px 22px;
-    font-size: 1em;
-    margin: 8px;
-    border-radius: 14px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-}
+.controls button { /* Target buttons inside the controls container */
+    background: linear-gradient(135deg, #ff80ab, #82b1ff, #80deea); /* Multi-color gradient background */
+    color: #fff; /* White text on buttons */
+    border: none; /* Remove default button border */
+    padding: 10px 22px; /* Button padding for clickable area */
+    font-size: 1em; /* Button font size */
+    margin: 8px; /* Space between buttons */
+    border-radius: 14px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor to indicate clickable */
+    transition: all 0.25s ease; /* Smooth transition for transform and shadow */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow to lift buttons */
+} /* End .controls button rules */
 
-.controls button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
-}
+.controls button:hover { /* Hover state for control buttons */
+    transform: translateY(-2px); /* Lift button slightly on hover */
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3); /* Lighter shadow on hover */
+} /* End hover rule */
 
-/* ===== Login Enter Button ===== */
-.button-link {
-    display: inline-block;
-    padding: 8px 14px;
-    background-color: #ae00ff;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-.button-link:hover {
-    background-color: #00b3a4;
-}
+/* ===== Login Enter Button ===== */ 
+/* Section header: link-style button */
+.button-link { /* Style for link-styled login button */
+    display: inline-block; /* Make it behave like inline block */
+    padding: 8px 14px; /* Internal padding */
+    background-color: #ae00ff; /* Purple background color */
+    color: white; /* White text color */
+    border-radius: 6px; /* Slightly rounded corners */
+    text-decoration: none; /* Remove underline if anchor */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1em; /* Base font size */
+    transition: background-color 0.3s; /* Smooth background-color transition */
+} /* End .button-link rule */
 
-/* ===== Results Section ===== */
-.results {
-    margin-top: 18px;
-    font-size: 1.05em;
-    color: #f3e5f5;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    padding: 12px;
-}
+.button-link:hover { /* Hover state for link-styled button */
+    background-color: #00b3a4; /* Change background color on hover */
+} /* End hover rule */
 
-/* ===== Decorative Hands Overlay ===== */
-body::after {
-    content: "";
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 280px;
-    height: 170px;
-    background: url('https://cdn.pixabay.com/photo/2017/01/06/19/15/hands-1959939_1280.jpg') no-repeat bottom right;
-    background-size: contain;
-    opacity: 0.25;
-    pointer-events: none;
-}
+/* ===== Results Section ===== */ 
+/* Section header: results display style */
+.results { /* Target results container */
+    margin-top: 18px; /* Space above results */
+    font-size: 1.05em; /* Slightly larger text for results */
+    color: #f3e5f5; /* Light purple result text color */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+    border-radius: 15px; /* Rounded corners for results box */
+    padding: 12px; /* Inner spacing for results box */
+} /* End .results rule */
 
-/* ===== Smaller Containers (login) ===== */
-.container {
-    margin: 0 auto;
-    display: inline-block;
-    padding: 18px;
-    background-color: #f06292;
-    border-radius: 18px;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
-}
+/* ===== Decorative Hands Overlay ===== */ 
+/* Section header: decorative pseudo-element */
+body::after { /* Create a pseudo-element for decorative hands image */
+    content: ""; /* Necessary to render the pseudo-element */
+    position: fixed; /* Fix it to viewport */
+    bottom: 0; /* Anchor to bottom */
+    right: 0; /* Anchor to right */
+    width: 280px; /* Width of decorative image area */
+    height: 170px; /* Height of decorative image area */
+    background: url('https://cdn.pixabay.com/photo/2017/01/06/19/15/hands-1959939_1280.jpg') no-repeat bottom right; /* Set decorative image positioned bottom-right */
+    background-size: contain; /* Scale the image to fit the box while preserving aspect ratio */
+    opacity: 0.25; /* Make it faint so it doesn't overpower content */
+    pointer-events: none; /* Make overlay non-interactive so clicks pass through */
+} /* End body::after rules */
 
-/* ===== Footer ===== */
-footer {
-    margin-top: auto;
-    padding: 12px;
-    font-size: 0.8em;
-    color: #fff;
-    opacity: 0.8;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-}
+/* ===== Smaller Containers (login) ===== */ 
+/* Section header: small utility container */
+.container { /* Generic small container (used for login) */
+    margin: 0 auto; /* Center horizontally */
+    display: inline-block; /* Shrink to content width */
+    padding: 18px; /* Internal spacing */
+    background-color: #f06292; /* Pink background color */
+    border-radius: 18px; /* Rounded corners */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3); /* Soft glow around container */
+} /* End .container rule */
 
-/* ===== Responsive Adjustment for Smaller Screens ===== */
-@media (max-height: 800px) {
-    html { font-size: 95%; }
-    body {
-        padding: 8px;
-    }
-    .typing-test-container {
-        padding: 24px;
-        max-width: 560px;
-    }
-    #text-to-type {
-        font-size: 1em;
-        padding: 10px;
-    }
-    #typing-input {
-        font-size: 0.95em;
-        padding: 10px;
-    }
-    .controls button {
-        font-size: 0.95em;
-        padding: 8px 16px;
-    }
-}
+/* ===== Footer ===== */ 
+/* Section header: page footer styles */
+footer { /* Target footer element */
+    margin-top: auto; /* Push footer to bottom in flex layout */
+    padding: 12px; /* Footer inner padding */
+    font-size: 0.8em; /* Slightly smaller font */
+    color: #fff; /* White footer text */
+    opacity: 0.8; /* Slight transparency for footer text */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6); /* Subtle dark shadow to improve readability */
+} /* End footer rule */
+
+/* ===== Responsive Adjustment for Smaller Screens ===== */ 
+/* Section header: media query for shorter viewports */
+@media (max-height: 800px) { /* Apply adjustments when viewport height is 800px or less */
+    html { font-size: 95%; } /* Slightly reduce base font-size for compact screens */
+    body { /* Adjust body padding for smaller screens */
+        padding: 8px; /* Reduce page padding */
+    } /* End body adjustments */
+
+    .typing-test-container { /* Adjust container sizing/padding */
+        padding: 24px; /* Slightly reduce container padding */
+        max-width: 560px; /* Slightly smaller max-width */
+    } /* End container adjustments */
+
+    #text-to-type { /* Adjust text-to-type block for smaller viewports */
+        font-size: 1em; /* Reduce font size slightly */
+        padding: 10px; /* Reduce padding */
+    } /* End #text-to-type adjustments */
+
+    #typing-input { /* Adjust typing input for smaller viewports */
+        font-size: 0.95em; /* Slightly smaller font size */
+        padding: 10px; /* Slightly smaller padding */
+    } /* End #typing-input adjustments */
+
+    .controls button { /* Adjust control buttons for smaller viewports */
+        font-size: 0.95em; /* Slightly smaller text on buttons */
+        padding: 8px 16px; /* Reduce button padding for space */
+    } /* End .controls button adjustments */
+} /* End media query */

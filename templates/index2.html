@@ -1,48 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Speed Test</title>
+<!DOCTYPE html> <!-- Declare document type as HTML5 -->
+<html lang="en"> <!-- Open html element and set language to English -->
+<head> <!-- Begin head section containing metadata and links -->
+    <meta charset="UTF-8"> <!-- Define character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure responsive scaling on mobile devices -->
+    <title>Typing Speed Test</title> <!-- Set the page title shown in the browser tab -->
 
     <!-- Link to CSS -->
-    <link rel="stylesheet" href="../static/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../static/styles.css"> <!-- Connect external stylesheet to style this page -->
+</head> <!-- Close head section -->
+<body> <!-- Begin the document body (visible content) -->
     <!-- Add section containing main content of the page -->
-    <main class="typing-test-container">
+    <main class="typing-test-container"> <!-- Main landmark with class used by CSS and JS to identify the typing area -->
         <!-- Add test title using h2 (App Heading) -->
-        <h2>Lets get started</h2>
+        <h2>Lets get started</h2> <!-- Secondary heading prompting the user to begin -->
         <!-- Dynamically display a random paragraph -->
         <!-- Text to Type -->
-        <p id="text-to-type">
-            <!-- Random text will appear here -->
-        </p>
+        <p id="text-to-type"> <!-- Paragraph element where JS will insert the random text to type -->
+            <!-- Random text will appear here --> <!-- Placeholder comment inside the tag for clarity -->
+        </p> <!-- Close text-to-type paragraph -->
 
         <!-- Add textarea to capture the user input -->
-        <textarea id="typing-input" rows="5" cols="50" placeholder="Start typing here..."></textarea>
+        <textarea id="typing-input" rows="5" cols="50" placeholder="Start typing here..."></textarea> <!-- Textarea where user types; JS reads its value and enables/disables it during the test -->
 
         <!-- Display the test timer -->
-        <p id="timer-display">Time: 0s</p>
+        <p id="timer-display">Time: 0s</p> <!-- Element that shows elapsed time; updated by JS -->
 
         <!-- add a section with class with Control Buttons -->
-        <section class="controls">
-            <button id="start-btn">Start Test</button>
-            <button id="stop-btn">Stop Test</button>
-            <button id="logout-btn">Exit Test</button>
-        </section>
+        <section class="controls"> <!-- Container for control buttons (Start, Stop, Logout) -->
+            <button id="start-btn">Start Test</button> <!-- Start button triggers JS startTest() -->
+            <button id="stop-btn">Stop Test</button> <!-- Stop button triggers JS endTest() -->
+            <button id="logout-btn">Exit Test</button> <!-- Logout button triggers JS to clear username and redirect to login -->
+        </section> <!-- Close controls section -->
 
         <!-- add a section with class to Results Display -->
-        <section class="results">
-            <p id="speed-result">Speed: —</p>
-            <p id="accuracy-result">Accuracy: —</p>
-        </section>
-    </main>
+        <section class="results"> <!-- Container that displays the test results -->
+            <p id="speed-result">Speed: —</p> <!-- Placeholder for WPM result; populated by JS after test ends -->
+            <p id="accuracy-result">Accuracy: —</p> <!-- Placeholder for accuracy percentage; populated by JS after test ends -->
+        </section> <!-- Close results section -->
+    </main> <!-- Close main typing-test-container -->
 
     <!-- Link to JavaScript -->
-    <script src="../static/index.js"></script>
-<footer class="footer">
-    <p>&copy; 2025 LaTorya's Website</p>
-</footer>
-</body>
-</html>
+    <script src="../static/index.js"></script> <!-- Include external JS which powers login, test logic, timer, and results -->
+<footer class="footer"> <!-- Footer area styled by CSS and positioned by layout -->
+    <p>&copy; 2025 LaTorya's Website</p> <!-- Copyright text -->
+</footer> <!-- Close footer -->
+</body> <!-- Close body element -->
+</html> <!-- Close html document -->
