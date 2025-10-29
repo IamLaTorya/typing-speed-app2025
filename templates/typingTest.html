@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <main class="typing-test-container">
+        <!-- App Heading -->
+        <h2>Lets get started</h2>
+
+        <!-- Text to Type -->
+        <p id="text-to-type">
+            <!-- Random text will appear here -->
+        </p>
+
+        <!-- Typing Input Area -->
+        <textarea id="typing-input" rows="5" cols="50" placeholder="Start typing here..."></textarea>
+
+        <!-- Timer Display -->
+        <p id="timer-display">Time: 0s</p>
+
+        <!-- Control Buttons -->
+        <section class="controls">
+            <button id="start-btn">Start Test</button>
+            <button id="stop-btn">Stop Test</button>
+            <button id="logout-btn">Exit Test</button>
+        </section>
+
+        <!-- Results Display -->
+        <section class="results">
+            <p id="speed-result">Speed: —</p>
+            <p id="accuracy-result">Accuracy: —</p>
+        </section>
+    </main>
+
+    <!-- Link to JavaScript -->
+    <script src="/static/index.js"></script>
+</body>
+</html>
