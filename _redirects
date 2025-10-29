@@ -1,1 +1,5 @@
-/*   /index.html   200
+/*   /index.html   200 
+<!-- /*              # The asterisk (*) means "match all routes" — any URL path on the site.
+/index.html     # For every matched route, serve the file named index.html.
+/200             # Send an HTTP 200 (OK) response instead of an error or redirect.
+-->
