@@ -42,6 +42,7 @@ body::before { /* Create a pseudo-element placed under content */
     border-radius: 22px; /* Rounded corners for the container */
     box-shadow: 0 0 18px rgba(255, 255, 255, 0.25); /* Soft outer glow to lift the container */
     text-align: center; /* Center text inside container */
+    -webkit-backdrop-filter: blur(8px); /* Blur background behind container (frosted glass effect) */
     backdrop-filter: blur(8px); /* Blur background behind container (frosted glass effect) */
     transition: transform 0.3s ease; /* Smooth transform transitions on hover */
 } /* End typing-test-container rules */
